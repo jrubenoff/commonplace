@@ -26,7 +26,7 @@ module.exports = {
 
     var date = new Date();
 
-    req.body.date = moment(date).format('YYYY-MM-DD HH:MM');
+    req.body.date = moment(date).format('YYYY-MM-DD HH:mm:ss');
     var post = templates[req.body.type](req.body);
 
     fs.writeFile(makeTitle(req.body.title, date), post, function(err) {
